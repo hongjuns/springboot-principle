@@ -1,0 +1,2 @@
+com.example.tobyspringboot.config.autoconfig.DispatcherServletConfig
+com.example.tobyspringboot.config.autoconfig.TomcatWebServerConfig
