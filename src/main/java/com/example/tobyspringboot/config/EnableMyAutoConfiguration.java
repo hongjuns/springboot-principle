@@ -1,7 +1,5 @@
 package com.example.tobyspringboot.config;
 
-import com.example.tobyspringboot.config.autoconfig.DispatcherServletConfig;
-import com.example.tobyspringboot.config.autoconfig.TomcatWebServerConfig;
 import org.springframework.context.annotation.Import;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
