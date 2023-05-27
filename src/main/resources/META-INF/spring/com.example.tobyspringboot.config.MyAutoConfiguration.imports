@@ -1,3 +1,5 @@
+com.example.tobyspringboot.config.autoconfig.DataSourceConfig
+com.example.tobyspringboot.config.autoconfig.PropertyPostProcessorConfig
 com.example.tobyspringboot.config.autoconfig.DispatcherServletConfig
 com.example.tobyspringboot.config.autoconfig.TomcatWebServerConfig
 com.example.tobyspringboot.config.autoconfig.JettyWebServerConfig
