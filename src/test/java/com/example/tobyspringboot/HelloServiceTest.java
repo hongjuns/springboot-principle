@@ -1,8 +1,6 @@
 package com.example.tobyspringboot;
 
-import com.example.tobyspringboot.helloboot.HelloDecorator;
-import com.example.tobyspringboot.helloboot.HelloService;
-import com.example.tobyspringboot.helloboot.SimpleHelloService;
+import com.example.tobyspringboot.helloboot.*;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,8 +8,8 @@ public class HelloServiceTest {
 
     @Test
     void simpleHelloService() {
-        SimpleHelloService simpleHelloService = new SimpleHelloService();
-        String ret = simpleHelloService.sayHello("Spring");
+        SimpleHelloService helloService = new SimpleHelloService(helloRepositoryStub);
+        String ret = helloService.sayHello("Spring");
         Assertions.assertThat(ret).isEqualTo("Hello Spring");
     }
     @Test
@@ -26,4 +24,16 @@ public class HelloServiceTest {
 
         Assertions.assertThat(ret).isEqualTo("*Test*");
     }
+    private static HelloRepository helloRepositoryStub = new HelloRepository() {
+        @Override
+        public Hello findHello(String name) {
+            return null;
+        }
+
+        @Override
+        public void increaseCount(String name) {
+
+        }
+    };
+
 }
