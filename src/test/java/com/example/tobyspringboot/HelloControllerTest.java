@@ -4,7 +4,9 @@ import com.example.tobyspringboot.helloboot.HelloController;
 import com.example.tobyspringboot.helloboot.HelloService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class HelloControllerTest {
 
     @Test

@@ -1,14 +1,14 @@
-package com.example.tobyspringboot.helloboot;
+package com.example.tobyspringboot;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
-import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.servlet.DispatcherServlet;
-@MySpringBootApplication
+
+
+@SpringBootApplication
 public class HellobootApplication {
 
     private final JdbcTemplate jdbcTemplate;

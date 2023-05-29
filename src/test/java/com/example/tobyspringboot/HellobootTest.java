@@ -1,7 +1,6 @@
 package com.example.tobyspringboot;
 
 
-import com.example.tobyspringboot.helloboot.HellobootApplication;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;

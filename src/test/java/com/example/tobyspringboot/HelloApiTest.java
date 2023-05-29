@@ -1,12 +1,15 @@
 package com.example.tobyspringboot;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import static org.assertj.core.api.Assertions.assertThat;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class HelloApiTest {
 
     @Test
@@ -15,7 +18,7 @@ public class HelloApiTest {
         TestRestTemplate rest = new TestRestTemplate();
 
         ResponseEntity<String> res =
-                    rest.getForEntity("http://localhost:9090/hello?name={name}",String.class,"Spring");
+                    rest.getForEntity("http://localhost:9090/app/hello?name={name}",String.class,"Spring");
 
         //Status Code
         assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
@@ -30,7 +33,7 @@ public class HelloApiTest {
         TestRestTemplate rest = new TestRestTemplate();
 
         ResponseEntity<String> res =
-                rest.getForEntity("http://localhost:8080/hello?name=", String.class,"");
+                rest.getForEntity("http://localhost:8080/app/hello?name=", String.class,"");
 
         assertThat(res.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
     }
